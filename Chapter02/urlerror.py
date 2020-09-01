@@ -38,5 +38,13 @@ print(urlparse.urlparse(amazonUrl))
 # information that's passed to the request object should be encoded using
 # urlencode() function.
 
+# The .urlencode() method ensures that arguments comply with the W3C standard
+# and are accepted by the server.
+
+data = {'param1': 'value1', 'param2': 'value2'}
+print(urlparse.urlencode(data))
+print(urlparse.urlencode(data).encode("utf-8"))
+
+
 
 
