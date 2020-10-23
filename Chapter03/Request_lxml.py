@@ -31,6 +31,7 @@ for element in tree.iter('input'):
 
 #element.values(): The attributes of HTML form element exist as key: value
 #pair. The value attribute holds the exact data for the particular element.
+
 #values() returns the value attribute for the chosen element in the list object
 
 #element.attrib: returns a Dict type object with a key:value pair
