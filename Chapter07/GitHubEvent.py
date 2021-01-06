@@ -1,13 +1,20 @@
+#Github Events list public activities that have been performed within the past 90 days.
+#These events are provided in pages, with 30 items per page and a maximum of 300 being
+#shown.
+
 import requests
 import json
 from collections import Counter
 dataSet = []
 
 url = 'https://api.github.com/'
+#If you’d like to add HTTP headers to a request, simply pass in a dict
+#to the headers parameter
 
+headers = {'Accept':'application/vnd.github.v3.full+json'}
 
 def readUrl(search):
-    results = requests.get(url + search)
+    results = requests.get(url + search, headers=headers)
     print("Status Code: ", results.status_code)
     print("Headers: Content-Type: ", results.headers['Content-Type'])
     return results.json()

@@ -11,9 +11,13 @@ def readUrl(search):
     # print("Headers: ", results.headers)
     return results.json()
 
-if __name__=="__main__":
+if __name__ == "__main__":
+
+    #jsonResult is a list of dictionaries, where every dictionary contains
+    #information of one university of Wales
+
     jsonResult = readUrl('Wales')
-    # print(jsonResult)
+    #Here we are iterating over the dictionaries of the list
     for university in jsonResult:
         name = university['name']
         url = university['web_pages'][0]
